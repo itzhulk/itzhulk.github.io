@@ -1,0 +1,46 @@
+:root{
+  --bg:#fff0f4;
+  --card:#ffdce6;
+  --accent:#ff4d94;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;background:linear-gradient(180deg,var(--bg),#fff);margin:0;color:#2b2b2b}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:rgba(255,77,148,0.06);backdrop-filter:blur(4px)}
+.brand{font-family:'Montserrat',;color:var(--accent);margin:0;font-size:28px}
+.site-header nav a{margin-left:16px;color:var(--accent);text-decoration:none;font-weight:600}
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);margin-bottom:18px}
+.game-area{position:relative;display:flex;flex-direction:column;align-items:center}
+canvas{background:linear-gradient(90deg,#ffeef7,#fff);border-radius:8px;box-shadow:inset 0 -6px 12px rgba(255,77,148,0.06)}
+.controls{margin-top:10px;color:var(--muted)}
+.slideshow{position:relative;height:240px;overflow:hidden;border-radius:10px}
+.slideshow img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.slideshow img.active{opacity:1}
+.mem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.mem-card img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+.propose-card{display:flex;flex-direction:column;align-items:center}
+.propose-area{position:relative;height:120px;width:100%;display:flex;align-items:center;justify-content:center}
+.btn{padding:12px 18px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+.yes{background:var(--accent);color:white;margin-right:12px}
+.no{background:#fff;color:var(--accent);border:2px solid var(--accent);position:absolute}
+.modal{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:1000}
+.hidden{display:none}
+.celebrate-video-container{background:rgba(255,255,255,0.95);padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.2);max-width:90vw;max-height:70vh;overflow:auto;margin-bottom:20px}
+.modal-inner{background:white;padding:20px;border-radius:12px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.15);margin-top:10px;z-index:1001}
+.site-footer{text-align:center;padding:12px;color:var(--muted)}
+
+/* TV and large slideshow styles */
+.tv{background:#222;border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.25)}
+.tv-screen{position:relative;height:420px;overflow:hidden;border-radius:8px;background:#000;display:flex;align-items:center;justify-content:center}
+.tv-screen img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity 0.8s ease-in-out}
+.tv-screen img:first-child{opacity:1}
+
+/* Memory strip styles - removed */
+
+@media(max-width:900px){
+  .propose-area{height:180px}
+  .tv-screen{height:260px}
+}
+
+@media(max-width:700px){.mem-grid{grid-template-columns:repeat(2,1fr)}canvas{width:100%}}

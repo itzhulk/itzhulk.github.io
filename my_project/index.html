@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proposal to my Love</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Made with love by Anshul for dear Simran</h1>
+    <nav>
+      <a href="index.html">Game</a>
+      <a href="propose.html">Propose</a>
+      <a href="memories.html">Memories</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Heart Runner — Jump the hearts!</h2>
+      <p class="muted">Press <strong>Space</strong> or click/tap to jump. Speed increases over time.</p>
+      <div class="game-area">
+        <canvas id="gameCanvas" width="900" height="300"></canvas>
+      </div>
+    </section>
+    <section class="card">
+      <p>When you lose you may try again or proceed to the next surprise.</p>
+      <p><a href="propose.html" class="btn">Go to Propose Page</a></p>
+    </section>
+  </main>
+
+  <div id="loseModal" class="modal hidden">
+    <div class="modal-inner">
+      <h3>You lose</h3>
+      <p>You lose, now you will have to marry me</p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:12px">
+        <button id="restartBtn" class="btn">Try Again</button>
+        <button id="proceedBtn" class="btn">Proceed Ahead</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">Made with ❤️</footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
