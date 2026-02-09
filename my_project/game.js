@@ -118,7 +118,7 @@
     // ground pattern (moving right to left)
     ctx.fillStyle = '#ffe6f0'; ctx.fillRect(0, player.ground + player.h, W, H - (player.ground + player.h));
     ctx.strokeStyle = '#ffd0e3'; ctx.lineWidth = 4; ctx.beginPath();
-    const dashX = (Date.now()/10)%40; // moves right to left
+    const dashX = -(Date.now()/10)%40; // moves right to left
     for(let x = -40 + dashX; x < W; x += 40){ ctx.moveTo(x, player.ground + player.h + 8); ctx.lineTo(x+20, player.ground + player.h + 8);} ctx.stroke();
 
     // player (image fallback to rectangle)
@@ -139,6 +139,12 @@
         drawHeart(o.x, o.y, o.w, '#ff4d94');
       }
     });
+
+    // character labels
+    ctx.fillStyle = '#8b536b'; ctx.font = 'bold 16px Inter';
+    ctx.fillText('you', player.x + 8, player.y - 8);
+    const shooterX = W - 80;
+    ctx.fillText('me', shooterX + 12, player.ground - 35);
 
     // countdown or instructions
     ctx.fillStyle = '#8b536b'; ctx.font = 'bold 20px Inter';
