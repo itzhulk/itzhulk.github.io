@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Will you marry me?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Made with love by Anshul for dear Simran</h1>
+    <nav>
+      <a href="index.html">Game</a>
+      <a href="memories.html">Memories</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="card propose-card" style="height:360px">
+      <h2 style="font-size:36px;text-align:center">So, will you be my valentine forever??<br>
+        <h3>(I dare you to press no)</h3>
+      </h2>
+      <div class="propose-area" id="proposeArea">
+        <button id="yesBtn" class="btn yes" style="transform-origin:center">Yes</button>
+        <button id="noBtn" class="btn no">No</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="celebrateOverlay" class="modal hidden">
+    <div class="celebrate-video-container">
+      <video id="loveVideo" width="35%" loop style="border-radius:12px; display:block; margin:0 auto 20px;">
+        <source src="assets/celebrate.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="modal-inner" id="celebrateInner" style="margin-top:20px;">
+      <h2 style="margin:6px 0">Yayy! Thank you for saying yes!</h2>
+      <div style="margin-top:12px">
+        <button id="toMemBtn" class="btn">Proceed Ahead Love</button>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">Made with ❤️</footer>
+
+  <script src="propose.js"></script>
+</body>
+</html>
